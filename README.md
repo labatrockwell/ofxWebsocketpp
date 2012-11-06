@@ -5,6 +5,7 @@ websocketpp wrapper for OpenFrameworks.
 
 Server supports multithreaded workers.
 Client launches in a single thread.
+Both client and server are decoupled from ofx loop.  Threaded callbacks to ofEvents, so protect your data structures.
 
 Both a client and server example is included.
 
