@@ -4,11 +4,14 @@ using namespace ofxWebsocketpp;
 
 //--------------------------------------------------------------
 void testApp::setup(){
-
-    client = new wsClient::client();
     
+    m_server_ptr = new wsServer::server(9001, 1, 1);
+    m_server_ptr->addListener(this);
+    m_server_ptr->startServer();
     
-    //server = new server::server(9001, 1, 1);
+    m_client_ptr = new wsClient::client();
+    m_client_ptr->addListener(this);
+    m_client_ptr->connect("ws://localhost:9001/");
 }
 
 //--------------------------------------------------------------
@@ -86,53 +89,53 @@ void sendBinary(wsServer::server::connection_ptr con, const string& binary)
     con->send(binary, websocketpp::frame::opcode::BINARY);
 }
 
-void testApp::onSocketMessage(wsServer::websocketMessageEvent &event)
+void testApp::onServerSocketMessage(wsServer::websocketMessageEvent &event)
 {
     cout << "got message event!" << endl;
     event.connection->send("Welcome!");
 }
 
-void testApp::onSocketHandshake(wsServer::websocketConnectionEvent &event)
+void testApp::onServerSocketHandshake(wsServer::websocketConnectionEvent &event)
 {
     cout << "handshake!" << endl;
 }
 
-void testApp::onSocketValidate(wsServer::websocketConnectionEvent &event)
+void testApp::onServerSocketValidate(wsServer::websocketConnectionEvent &event)
 {
     cout << "validated!" << endl;
 }
 
-void testApp::onSocketOpen(wsServer::websocketConnectionEvent &event)
+void testApp::onServerSocketOpen(wsServer::websocketConnectionEvent &event)
 {
     cout << "socket open!" << endl;
 }
 
-void testApp::onSocketClose(wsServer::websocketConnectionEvent &event)
+void testApp::onServerSocketClose(wsServer::websocketConnectionEvent &event)
 {
     cout << "socket close!" << endl;
 }
 
-void testApp::onSocketFail(wsServer::websocketConnectionEvent &event)
+void testApp::onServerSocketFail(wsServer::websocketConnectionEvent &event)
 {
     cout << "socket fail!" << endl;
 }
 
-void testApp::onSocketHttp(wsServer::websocketConnectionEvent &event)
+void testApp::onServerSocketHttp(wsServer::websocketConnectionEvent &event)
 {
     cout << "http!" << endl;
 }
 
-void testApp::onSocketPing(wsServer::websocketPingEvent &event)
+void testApp::onServerSocketPing(wsServer::websocketPingEvent &event)
 {
     cout << "ping!" << endl;
 }
 
-void testApp::onSocketPong(wsServer::websocketPingEvent &event)
+void testApp::onServerSocketPong(wsServer::websocketPingEvent &event)
 {
     cout << "pong!" << endl;
 }
 
-void testApp::onSocketPongFail(wsServer::websocketPingEvent &event)
+void testApp::onServerSocketPongFail(wsServer::websocketPingEvent &event)
 {
     cout << "pong fail!" << endl;
 }
@@ -153,45 +156,45 @@ void sendBinary(wsClient::client::connection_ptr con, const string& binary)
     con->send(binary, websocketpp::frame::opcode::BINARY);
 }
 
-void testApp::onSocketMessage(wsClient::websocketMessageEvent &event)
+void testApp::onClientSocketMessage(wsClient::websocketMessageEvent &event)
 {
     static int i=0;
     cout << "got message event!  " << (i++) << endl;
     event.connection->send("HI!");
 }
 
-void testApp::onSocketHandshake(wsClient::websocketConnectionEvent &event)
+void testApp::onClientSocketHandshake(wsClient::websocketConnectionEvent &event)
 {
     cout << "handshake!" << endl;
 }
 
-void testApp::onSocketOpen(wsClient::websocketConnectionEvent &event)
+void testApp::onClientSocketOpen(wsClient::websocketConnectionEvent &event)
 {
     cout << "socket open!" << endl;
     event.connection->send("Hello");
 }
 
-void testApp::onSocketClose(wsClient::websocketConnectionEvent &event)
+void testApp::onClientSocketClose(wsClient::websocketConnectionEvent &event)
 {
     cout << "socket close!" << endl;
 }
 
-void testApp::onSocketFail(wsClient::websocketConnectionEvent &event)
+void testApp::onClientSocketFail(wsClient::websocketConnectionEvent &event)
 {
     cout << "socket fail!" << endl;
 }
 
-void testApp::onSocketPing(wsClient::websocketPingEvent &event)
+void testApp::onClientSocketPing(wsClient::websocketPingEvent &event)
 {
     cout << "ping!" << endl;
 }
 
-void testApp::onSocketPong(wsClient::websocketPingEvent &event)
+void testApp::onClientSocketPong(wsClient::websocketPingEvent &event)
 {
     cout << "pong!" << endl;
 }
 
-void testApp::onSocketPongFail(wsClient::websocketPingEvent &event)
+void testApp::onClientSocketPongFail(wsClient::websocketPingEvent &event)
 {
     cout << "pong fail!" << endl;
 }

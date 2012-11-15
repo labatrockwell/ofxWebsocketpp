@@ -23,7 +23,7 @@ public:
 		
     // **************************
     
-    ofxWebsocketpp::wsServer::server *server;
+    ofxWebsocketpp::wsServer::server *m_server_ptr;
 
     void sendString(ofxWebsocketpp::wsServer::server::connection_ptr con, const string& str);
     void sendBinary(ofxWebsocketpp::wsServer::server::connection_ptr con, const string& binary);

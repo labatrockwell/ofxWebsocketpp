@@ -58,36 +58,36 @@ namespace wsServer{
         template<class T>
         void addListener(T * app){
             
-            ofAddListener( websocketMessageEvent::messageEventNotifier,         app, &T::onSocketMessage );
+            ofAddListener( websocketMessageEvent::messageEventNotifier,         app, &T::onServerSocketMessage );
             
-            ofAddListener( websocketPingEvent::pingEventNotifier,               app, &T::onSocketPing );
-            ofAddListener( websocketPingEvent::pongEventNotifier,               app, &T::onSocketPong );
-            ofAddListener( websocketPingEvent::pongTimeoutNotifier,             app, &T::onSocketPongFail );
+            ofAddListener( websocketPingEvent::pingEventNotifier,               app, &T::onServerSocketPing );
+            ofAddListener( websocketPingEvent::pongEventNotifier,               app, &T::onServerSocketPong );
+            ofAddListener( websocketPingEvent::pongTimeoutNotifier,             app, &T::onServerSocketPongFail );
             
-            ofAddListener( websocketConnectionEvent::handshakeEventNotifier,    app, &T::onSocketHandshake );
-            ofAddListener( websocketConnectionEvent::validateEventNotifier,     app, &T::onSocketValidate );
-            ofAddListener( websocketConnectionEvent::openEventNotifier,         app, &T::onSocketOpen );
-            ofAddListener( websocketConnectionEvent::closeEventNotifier,        app, &T::onSocketClose );
-            ofAddListener( websocketConnectionEvent::failEventNotifier,         app, &T::onSocketFail );
-            ofAddListener( websocketConnectionEvent::httpEventNotifier,         app, &T::onSocketHttp );
+            ofAddListener( websocketConnectionEvent::handshakeEventNotifier,    app, &T::onServerSocketHandshake );
+            ofAddListener( websocketConnectionEvent::validateEventNotifier,     app, &T::onServerSocketValidate );
+            ofAddListener( websocketConnectionEvent::openEventNotifier,         app, &T::onServerSocketOpen );
+            ofAddListener( websocketConnectionEvent::closeEventNotifier,        app, &T::onServerSocketClose );
+            ofAddListener( websocketConnectionEvent::failEventNotifier,         app, &T::onServerSocketFail );
+            ofAddListener( websocketConnectionEvent::httpEventNotifier,         app, &T::onServerSocketHttp );
             
         }
         
         template<class T>
         void removeListener(T * app){
             
-            ofRemoveListener( websocketMessageEvent::messageEventNotifier,     app,  &T::onSocketMessage );
+            ofRemoveListener( websocketMessageEvent::messageEventNotifier,     app,  &T::onServerSocketMessage );
             
-            ofRemoveListener( websocketPingEvent::pingEventNotifier,        app, &T::onSocketPing );
-            ofRemoveListener( websocketPingEvent::pongEventNotifier,        app, &T::onSocketPong );
-            ofRemoveListener( websocketPingEvent::pongTimeoutNotifier,      app, &T::onSocketPongFail );
+            ofRemoveListener( websocketPingEvent::pingEventNotifier,        app, &T::onServerSocketPing );
+            ofRemoveListener( websocketPingEvent::pongEventNotifier,        app, &T::onServerSocketPong );
+            ofRemoveListener( websocketPingEvent::pongTimeoutNotifier,      app, &T::onServerSocketPongFail );
             
-            ofRemoveListener( websocketConnectionEvent::handshakeEventNotifier,   app, &T::onSocketHandshake );
-            ofRemoveListener( websocketConnectionEvent::validateEventNotifier,    app, &T::onSocketValidate );
-            ofRemoveListener( websocketConnectionEvent::openEventNotifier,        app, &T::onSocketOpen );
-            ofRemoveListener( websocketConnectionEvent::closeEventNotifier,       app, &T::onSocketClose );
-            ofRemoveListener( websocketConnectionEvent::failEventNotifier,        app, &T::onSocketFail );
-            ofRemoveListener( websocketConnectionEvent::httpEventNotifier,        app, &T::onSocketHttp );
+            ofRemoveListener( websocketConnectionEvent::handshakeEventNotifier,   app, &T::onServerSocketHandshake );
+            ofRemoveListener( websocketConnectionEvent::validateEventNotifier,    app, &T::onServerSocketValidate );
+            ofRemoveListener( websocketConnectionEvent::openEventNotifier,        app, &T::onServerSocketOpen );
+            ofRemoveListener( websocketConnectionEvent::closeEventNotifier,       app, &T::onServerSocketClose );
+            ofRemoveListener( websocketConnectionEvent::failEventNotifier,        app, &T::onServerSocketFail );
+            ofRemoveListener( websocketConnectionEvent::httpEventNotifier,        app, &T::onServerSocketHttp );
         }
         
          

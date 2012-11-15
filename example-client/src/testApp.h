@@ -24,7 +24,7 @@ public:
 
     // **************************
     
-    ofxWebsocketpp::wsClient::client  client;
+    ofxWebsocketpp::wsClient::client  m_client;
     
     void sendBinary(ofxWebsocketpp::wsClient::client::connection_ptr con, const string& binary);
     void sendString(ofxWebsocketpp::wsClient::client::connection_ptr con, const string& str);

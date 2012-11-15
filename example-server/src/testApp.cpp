@@ -7,9 +7,9 @@ void testApp::setup(){
     
     ofSetWindowShape(400, 200);
     
-    server = new wsServer::server(9001, 1, 1);
-    server->addListener(this);
-    server->startServer();
+    m_server_ptr = new server(9001, 1, 1);
+    m_server_ptr->addListener(this);
+    m_server_ptr->startServer();
 }
 
 //--------------------------------------------------------------
@@ -54,9 +54,9 @@ void testApp::mouseDragged(int x, int y, int button){
 void testApp::mousePressed(int x, int y, int button){
     if(y > 0 && y < 400) {
         if(x > 0 && x < 200) {
-            server->stopServer();
+            m_server_ptr->stopServer();
         } else if( x > 200 && x < 400) {
-            server->startServer();
+            m_server_ptr->startServer();
         }
     }
 }

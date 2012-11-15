@@ -52,32 +52,32 @@ namespace wsClient {
         template<class T>
         void addListener(T * app){
             
-            ofAddListener( websocketMessageEvent::messageEventNotifier,         app, &T::onSocketMessage );
+            ofAddListener( websocketMessageEvent::messageEventNotifier,         app, &T::onClientSocketMessage );
             
-            ofAddListener( websocketPingEvent::pingEventNotifier,               app, &T::onSocketPing );
-            ofAddListener( websocketPingEvent::pongEventNotifier,               app, &T::onSocketPong );
-            ofAddListener( websocketPingEvent::pongTimeoutNotifier,             app, &T::onSocketPongFail );
+            ofAddListener( websocketPingEvent::pingEventNotifier,               app, &T::onClientSocketPing );
+            ofAddListener( websocketPingEvent::pongEventNotifier,               app, &T::onClientSocketPong );
+            ofAddListener( websocketPingEvent::pongTimeoutNotifier,             app, &T::onClientSocketPongFail );
             
-            ofAddListener( websocketConnectionEvent::handshakeEventNotifier,    app, &T::onSocketHandshake );
-            ofAddListener( websocketConnectionEvent::openEventNotifier,         app, &T::onSocketOpen );
-            ofAddListener( websocketConnectionEvent::closeEventNotifier,        app, &T::onSocketClose );
-            ofAddListener( websocketConnectionEvent::failEventNotifier,         app, &T::onSocketFail );
+            ofAddListener( websocketConnectionEvent::handshakeEventNotifier,    app, &T::onClientSocketHandshake );
+            ofAddListener( websocketConnectionEvent::openEventNotifier,         app, &T::onClientSocketOpen );
+            ofAddListener( websocketConnectionEvent::closeEventNotifier,        app, &T::onClientSocketClose );
+            ofAddListener( websocketConnectionEvent::failEventNotifier,         app, &T::onClientSocketFail );
             
         }
         
         template<class T>
         void removeListener(T * app){
             
-            ofRemoveListener( websocketMessageEvent::messageEventNotifier,      app, &T::onSocketMessage );
+            ofRemoveListener( websocketMessageEvent::messageEventNotifier,      app, &T::onClientSocketMessage );
             
-            ofRemoveListener( websocketPingEvent::pingEventNotifier,            app, &T::onSocketPing );
-            ofRemoveListener( websocketPingEvent::pongEventNotifier,            app, &T::onSocketPong );
-            ofRemoveListener( websocketPingEvent::pongTimeoutNotifier,          app, &T::onSocketPongFail );
+            ofRemoveListener( websocketPingEvent::pingEventNotifier,            app, &T::onClientSocketPing );
+            ofRemoveListener( websocketPingEvent::pongEventNotifier,            app, &T::onClientSocketPong );
+            ofRemoveListener( websocketPingEvent::pongTimeoutNotifier,          app, &T::onClientSocketPongFail );
             
-            ofRemoveListener( websocketConnectionEvent::handshakeEventNotifier, app, &T::onSocketHandshake );
-            ofRemoveListener( websocketConnectionEvent::openEventNotifier,      app, &T::onSocketOpen );
-            ofRemoveListener( websocketConnectionEvent::closeEventNotifier,     app, &T::onSocketClose );
-            ofRemoveListener( websocketConnectionEvent::failEventNotifier,      app, &T::onSocketFail );
+            ofRemoveListener( websocketConnectionEvent::handshakeEventNotifier, app, &T::onClientSocketHandshake );
+            ofRemoveListener( websocketConnectionEvent::openEventNotifier,      app, &T::onClientSocketOpen );
+            ofRemoveListener( websocketConnectionEvent::closeEventNotifier,     app, &T::onClientSocketClose );
+            ofRemoveListener( websocketConnectionEvent::failEventNotifier,      app, &T::onClientSocketFail );
         }
         
          
