@@ -23,6 +23,7 @@
 
 
 namespace ofxWebsocketpp {
+namespace wsServer {
     
     
     using websocketpp::server;
@@ -239,4 +240,4 @@ namespace ofxWebsocketpp {
     
     
     
-};  // end namespace
+}};  // end namespace

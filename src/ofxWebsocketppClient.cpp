@@ -10,6 +10,7 @@
 #include "ofxWebsocketppClientHandler.h"
 
 namespace ofxWebsocketpp {
+namespace wsClient {
 
     client::client()
     {
@@ -91,4 +92,4 @@ namespace ofxWebsocketpp {
             cerr << "Exception connecting: " << e.what() << endl;
         }
     }
-};  // end namespace
+}};  // end namespaces

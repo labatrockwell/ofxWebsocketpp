@@ -19,6 +19,7 @@
 
 
 namespace ofxWebsocketpp {
+namespace wsClient{
     
     
     using websocketpp::role::client;
@@ -78,4 +79,4 @@ namespace ofxWebsocketpp {
     
     
     
-};  // end namespace
+}};  // end namespace

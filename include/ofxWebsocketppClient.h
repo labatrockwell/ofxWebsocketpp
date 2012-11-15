@@ -26,6 +26,7 @@
 
 
 namespace ofxWebsocketpp {
+namespace wsClient {
     
     class client : public ofThread{
     public:
@@ -90,6 +91,6 @@ namespace ofxWebsocketpp {
         
     };
     
-};  // end namespace
+}};  // end namespaces
 
 #endif

@@ -13,6 +13,7 @@
 // TODO add namespace
 
 namespace ofxWebsocketpp {
+namespace wsServer {
     
     // connection events
     // ***************************************************
@@ -111,5 +112,5 @@ namespace ofxWebsocketpp {
         ofNotifyEvent(pongTimeoutNotifier, event);
     }
     
-};
+}};
 

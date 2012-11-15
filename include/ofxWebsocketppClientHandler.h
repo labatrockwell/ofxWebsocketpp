@@ -26,6 +26,7 @@
 
 
 namespace ofxWebsocketpp {
+namespace wsClient {
     
     // The WebSocket++ handler in this case reads messages from connections and packs
     // connection pointer + message into a request struct and passes it off to the
@@ -52,7 +53,7 @@ namespace ofxWebsocketpp {
     
     
     
-};  // end namespace
+}};  // end namespaces
 
 
 

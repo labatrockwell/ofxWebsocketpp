@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 
-#include "ofxWebsocketppServer.h"
+#include "ofxWebsocketpp.h"
 
 class testApp : public ofBaseApp{
 
@@ -20,11 +20,28 @@ public:
     void windowResized(int w, int h);
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
-		
-    // **************************
-    
-    ofxWebsocketpp::wsServer::server *server;
 
+    ofxWebsocketpp::wsServer::server *server;
+    ofxWebsocketpp::wsClient::client *client;
+    
+    
+    // Client Callbacks
+    void sendBinary(ofxWebsocketpp::wsClient::client::connection_ptr con, const string& binary);
+    void sendString(ofxWebsocketpp::wsClient::client::connection_ptr con, const string& str);
+    
+    void onSocketMessage(ofxWebsocketpp::wsClient::websocketMessageEvent &event);
+    
+    void onSocketPing(ofxWebsocketpp::wsClient::websocketPingEvent &event);
+    void onSocketPong(ofxWebsocketpp::wsClient::websocketPingEvent &event);
+    void onSocketPongFail(ofxWebsocketpp::wsClient::websocketPingEvent &event);
+    
+    void onSocketHandshake(ofxWebsocketpp::wsClient::websocketConnectionEvent &event);
+    void onSocketOpen(ofxWebsocketpp::wsClient::websocketConnectionEvent &event);
+    void onSocketClose(ofxWebsocketpp::wsClient::websocketConnectionEvent &event);
+    void onSocketFail(ofxWebsocketpp::wsClient::websocketConnectionEvent &event);
+		
+    
+    // Server Callbacks
     void sendString(ofxWebsocketpp::wsServer::server::connection_ptr con, const string& str);
     void sendBinary(ofxWebsocketpp::wsServer::server::connection_ptr con, const string& binary);
     
@@ -38,4 +55,5 @@ public:
     void onSocketPing(ofxWebsocketpp::wsServer::websocketPingEvent &event);
     void onSocketPong(ofxWebsocketpp::wsServer::websocketPingEvent &event);
     void onSocketPongFail(ofxWebsocketpp::wsServer::websocketPingEvent &event);
+    
 };

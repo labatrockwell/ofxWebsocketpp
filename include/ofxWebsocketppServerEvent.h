@@ -17,6 +17,7 @@
 
 
 namespace ofxWebsocketpp {
+namespace wsServer {
     
     // root class
     class websocketEvent : public ofEventArgs {
@@ -172,7 +173,7 @@ namespace ofxWebsocketpp {
     };
     
     
-};  // end namespace
+}};  // end namespaces
 
 #endif
 

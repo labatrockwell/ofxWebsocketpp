@@ -29,6 +29,7 @@
  */
  
 namespace ofxWebsocketpp {
+namespace wsServer{
 
     // unfortunately you can't expose an enum through typedef
     //typedef websocketpp::frame::opcode::BINARY OPCODE_BINARY;
@@ -102,6 +103,6 @@ namespace ofxWebsocketpp {
         
     };
     
-};  // end namespace
+}};  // end namespaces
 
 #endif

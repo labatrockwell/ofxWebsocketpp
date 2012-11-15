@@ -10,6 +10,7 @@
 #include "ofxWebsocketppServerHandler.h"
 
 namespace ofxWebsocketpp {
+namespace wsServer {
     
     server::server(unsigned short port,
                    unsigned int poolThreads,
@@ -110,4 +111,4 @@ namespace ofxWebsocketpp {
         m_csh = NULL;
         m_rs = NULL;
     }
-};  // end namespace
+}};  // end namespace

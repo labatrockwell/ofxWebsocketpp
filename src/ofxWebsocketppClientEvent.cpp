@@ -10,9 +10,8 @@
 #include "ofxWebsocketppClientEvent.h"
 #include "ofEvents.h"
 
-// TODO add namespace
-
 namespace ofxWebsocketpp {
+namespace wsClient{
     
     // connection events
     // ***************************************************
@@ -100,5 +99,5 @@ namespace ofxWebsocketpp {
         ofNotifyEvent(pongTimeoutNotifier, event);
     }
     
-};
+}};
 

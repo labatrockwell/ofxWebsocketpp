@@ -1,11 +1,13 @@
 #include "testApp.h"
 
+using namespace ofxWebsocketpp::wsServer;
+
 //--------------------------------------------------------------
 void testApp::setup(){
     
     ofSetWindowShape(400, 200);
     
-    server = new ofxWebsocketpp::server(9001, 1, 1);
+    server = new wsServer::server(9001, 1, 1);
     server->addListener(this);
     server->startServer();
 }
@@ -85,65 +87,65 @@ void testApp::dragEvent(ofDragInfo dragInfo){
 // *************************************************************
 
 
-void sendString(ofxWebsocketpp::server::connection_ptr con, const string& str)
+void sendString(server::connection_ptr con, const string& str)
 {
     con->send(str);
 }
 
-void sendBinary(ofxWebsocketpp::server::connection_ptr con, const string& binary)
+void sendBinary(server::connection_ptr con, const string& binary)
 {
     // unfortunately there's no good way to expose the BINARY enum
     // through the wrapper class as it's an Enum
     con->send(binary, websocketpp::frame::opcode::BINARY);
 }
 
-void testApp::onSocketMessage(ofxWebsocketpp::websocketMessageEvent &event)
+void testApp::onSocketMessage(websocketMessageEvent &event)
 {
     cout << "got message event!" << endl;
     event.connection->send("Welcome!");
 }
 
-void testApp::onSocketHandshake(ofxWebsocketpp::websocketConnectionEvent &event)
+void testApp::onSocketHandshake(websocketConnectionEvent &event)
 {
     cout << "handshake!" << endl;
 }
 
-void testApp::onSocketValidate(ofxWebsocketpp::websocketConnectionEvent &event)
+void testApp::onSocketValidate(websocketConnectionEvent &event)
 {
     cout << "validated!" << endl;
 }
 
-void testApp::onSocketOpen(ofxWebsocketpp::websocketConnectionEvent &event)
+void testApp::onSocketOpen(websocketConnectionEvent &event)
 {
     cout << "socket open!" << endl;
 }
 
-void testApp::onSocketClose(ofxWebsocketpp::websocketConnectionEvent &event)
+void testApp::onSocketClose(websocketConnectionEvent &event)
 {
     cout << "socket close!" << endl;
 }
 
-void testApp::onSocketFail(ofxWebsocketpp::websocketConnectionEvent &event)
+void testApp::onSocketFail(websocketConnectionEvent &event)
 {
     cout << "socket fail!" << endl;
 }
 
-void testApp::onSocketHttp(ofxWebsocketpp::websocketConnectionEvent &event)
+void testApp::onSocketHttp(websocketConnectionEvent &event)
 {
     cout << "http!" << endl;
 }
 
-void testApp::onSocketPing(ofxWebsocketpp::websocketPingEvent &event)
+void testApp::onSocketPing(websocketPingEvent &event)
 {
     cout << "ping!" << endl;
 }
 
-void testApp::onSocketPong(ofxWebsocketpp::websocketPingEvent &event)
+void testApp::onSocketPong(websocketPingEvent &event)
 {
     cout << "pong!" << endl;
 }
 
-void testApp::onSocketPongFail(ofxWebsocketpp::websocketPingEvent &event)
+void testApp::onSocketPongFail(websocketPingEvent &event)
 {
     cout << "pong fail!" << endl;
 }

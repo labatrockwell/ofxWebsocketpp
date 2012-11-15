@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F27AD5016484E42000FD19B /* libboost_regex-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F27AD4F16484E42000FD19B /* libboost_regex-mt.a */; };
-		5F27AD5216484E58000FD19B /* libboost_random-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F27AD5116484E58000FD19B /* libboost_random-mt.a */; };
-		5FC2B693165485AB0022FE8D /* ofxWebsocketppClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2B690165485AB0022FE8D /* ofxWebsocketppClient.cpp */; };
-		5FC2B694165485AB0022FE8D /* ofxWebsocketppClientEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2B691165485AB0022FE8D /* ofxWebsocketppClientEvent.cpp */; };
-		5FC2B695165485AB0022FE8D /* ofxWebsocketppClientHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2B692165485AB0022FE8D /* ofxWebsocketppClientHandler.cpp */; };
-		5FEF2AFF1646FAC00073E087 /* libboost_date_time-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FEF2ABA1646FABD0073E087 /* libboost_date_time-mt.a */; };
-		5FEF2B001646FAC00073E087 /* libboost_system-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FEF2ABB1646FABD0073E087 /* libboost_system-mt.a */; };
-		5FEF2B011646FAC00073E087 /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FEF2ABC1646FABD0073E087 /* libboost_thread-mt.a */; };
-		5FEF2B101646FAC00073E087 /* libwebsocketpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FEF2AFE1646FABD0073E087 /* libwebsocketpp.a */; };
+		5FC2B6BD16548A0B0022FE8D /* libboost_date_time-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC2B6B816548A0B0022FE8D /* libboost_date_time-mt.a */; };
+		5FC2B6BE16548A0B0022FE8D /* libboost_random-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC2B6B916548A0B0022FE8D /* libboost_random-mt.a */; };
+		5FC2B6BF16548A0B0022FE8D /* libboost_regex-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC2B6BA16548A0B0022FE8D /* libboost_regex-mt.a */; };
+		5FC2B6C016548A0B0022FE8D /* libboost_system-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC2B6BB16548A0B0022FE8D /* libboost_system-mt.a */; };
+		5FC2B6C116548A0B0022FE8D /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC2B6BC16548A0B0022FE8D /* libboost_thread-mt.a */; };
+		5FC2B6C316548A110022FE8D /* libwebsocketpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC2B6C216548A110022FE8D /* libwebsocketpp.a */; };
+		5FC2B6D016548A400022FE8D /* ofxWebsocketppClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2B6CA16548A400022FE8D /* ofxWebsocketppClient.cpp */; };
+		5FC2B6D116548A400022FE8D /* ofxWebsocketppClientEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2B6CB16548A400022FE8D /* ofxWebsocketppClientEvent.cpp */; };
+		5FC2B6D216548A400022FE8D /* ofxWebsocketppClientHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2B6CC16548A400022FE8D /* ofxWebsocketppClientHandler.cpp */; };
+		5FC2B6D316548A400022FE8D /* ofxWebsocketppServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2B6CD16548A400022FE8D /* ofxWebsocketppServer.cpp */; };
+		5FC2B6D416548A400022FE8D /* ofxWebsocketppServerEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2B6CE16548A400022FE8D /* ofxWebsocketppServerEvent.cpp */; };
+		5FC2B6D516548A400022FE8D /* ofxWebsocketppServerHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FC2B6CF16548A400022FE8D /* ofxWebsocketppServerHandler.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -69,18 +72,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5F27AD4F16484E42000FD19B /* libboost_regex-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_regex-mt.a"; sourceTree = "<group>"; };
-		5F27AD5116484E58000FD19B /* libboost_random-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_random-mt.a"; sourceTree = "<group>"; };
-		5FC2B687165485550022FE8D /* ofxWebsocketppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxWebsocketppClient.h; sourceTree = "<group>"; };
-		5FC2B688165485550022FE8D /* ofxWebsocketppClientEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxWebsocketppClientEvent.h; sourceTree = "<group>"; };
-		5FC2B689165485550022FE8D /* ofxWebsocketppClientHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxWebsocketppClientHandler.h; sourceTree = "<group>"; };
-		5FC2B690165485AB0022FE8D /* ofxWebsocketppClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxWebsocketppClient.cpp; sourceTree = "<group>"; };
-		5FC2B691165485AB0022FE8D /* ofxWebsocketppClientEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxWebsocketppClientEvent.cpp; sourceTree = "<group>"; };
-		5FC2B692165485AB0022FE8D /* ofxWebsocketppClientHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxWebsocketppClientHandler.cpp; sourceTree = "<group>"; };
-		5FEF2ABA1646FABD0073E087 /* libboost_date_time-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_date_time-mt.a"; sourceTree = "<group>"; };
-		5FEF2ABB1646FABD0073E087 /* libboost_system-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_system-mt.a"; sourceTree = "<group>"; };
-		5FEF2ABC1646FABD0073E087 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_thread-mt.a"; sourceTree = "<group>"; };
-		5FEF2AFE1646FABD0073E087 /* libwebsocketpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebsocketpp.a; sourceTree = "<group>"; };
+		5FC2B6B816548A0B0022FE8D /* libboost_date_time-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_date_time-mt.a"; sourceTree = "<group>"; };
+		5FC2B6B916548A0B0022FE8D /* libboost_random-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_random-mt.a"; sourceTree = "<group>"; };
+		5FC2B6BA16548A0B0022FE8D /* libboost_regex-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_regex-mt.a"; sourceTree = "<group>"; };
+		5FC2B6BB16548A0B0022FE8D /* libboost_system-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_system-mt.a"; sourceTree = "<group>"; };
+		5FC2B6BC16548A0B0022FE8D /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_thread-mt.a"; sourceTree = "<group>"; };
+		5FC2B6C216548A110022FE8D /* libwebsocketpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebsocketpp.a; sourceTree = "<group>"; };
+		5FC2B6C416548A330022FE8D /* ofxWebsocketppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxWebsocketppClient.h; path = include/ofxWebsocketppClient.h; sourceTree = "<group>"; };
+		5FC2B6C516548A330022FE8D /* ofxWebsocketppClientEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxWebsocketppClientEvent.h; path = include/ofxWebsocketppClientEvent.h; sourceTree = "<group>"; };
+		5FC2B6C616548A330022FE8D /* ofxWebsocketppClientHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxWebsocketppClientHandler.h; path = include/ofxWebsocketppClientHandler.h; sourceTree = "<group>"; };
+		5FC2B6C716548A330022FE8D /* ofxWebsocketppServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxWebsocketppServer.h; path = include/ofxWebsocketppServer.h; sourceTree = "<group>"; };
+		5FC2B6C816548A330022FE8D /* ofxWebsocketppServerEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxWebsocketppServerEvent.h; path = include/ofxWebsocketppServerEvent.h; sourceTree = "<group>"; };
+		5FC2B6C916548A330022FE8D /* ofxWebsocketppServerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxWebsocketppServerHandler.h; path = include/ofxWebsocketppServerHandler.h; sourceTree = "<group>"; };
+		5FC2B6CA16548A400022FE8D /* ofxWebsocketppClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxWebsocketppClient.cpp; path = src/ofxWebsocketppClient.cpp; sourceTree = "<group>"; };
+		5FC2B6CB16548A400022FE8D /* ofxWebsocketppClientEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxWebsocketppClientEvent.cpp; path = src/ofxWebsocketppClientEvent.cpp; sourceTree = "<group>"; };
+		5FC2B6CC16548A400022FE8D /* ofxWebsocketppClientHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxWebsocketppClientHandler.cpp; path = src/ofxWebsocketppClientHandler.cpp; sourceTree = "<group>"; };
+		5FC2B6CD16548A400022FE8D /* ofxWebsocketppServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxWebsocketppServer.cpp; path = src/ofxWebsocketppServer.cpp; sourceTree = "<group>"; };
+		5FC2B6CE16548A400022FE8D /* ofxWebsocketppServerEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxWebsocketppServerEvent.cpp; path = src/ofxWebsocketppServerEvent.cpp; sourceTree = "<group>"; };
+		5FC2B6CF16548A400022FE8D /* ofxWebsocketppServerHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxWebsocketppServerHandler.cpp; path = src/ofxWebsocketppServerHandler.cpp; sourceTree = "<group>"; };
+		5FC2B6D7165493AD0022FE8D /* ofxWebsocketpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxWebsocketpp.h; path = include/ofxWebsocketpp.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -92,7 +102,7 @@
 		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* example-clientDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-clientDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* example-server-clientDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-server-clientDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
@@ -129,84 +139,89 @@
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
 				E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */,
-				5FEF2AFF1646FAC00073E087 /* libboost_date_time-mt.a in Frameworks */,
-				5FEF2B001646FAC00073E087 /* libboost_system-mt.a in Frameworks */,
-				5FEF2B011646FAC00073E087 /* libboost_thread-mt.a in Frameworks */,
-				5FEF2B101646FAC00073E087 /* libwebsocketpp.a in Frameworks */,
-				5F27AD5016484E42000FD19B /* libboost_regex-mt.a in Frameworks */,
-				5F27AD5216484E58000FD19B /* libboost_random-mt.a in Frameworks */,
+				5FC2B6BD16548A0B0022FE8D /* libboost_date_time-mt.a in Frameworks */,
+				5FC2B6BE16548A0B0022FE8D /* libboost_random-mt.a in Frameworks */,
+				5FC2B6BF16548A0B0022FE8D /* libboost_regex-mt.a in Frameworks */,
+				5FC2B6C016548A0B0022FE8D /* libboost_system-mt.a in Frameworks */,
+				5FC2B6C116548A0B0022FE8D /* libboost_thread-mt.a in Frameworks */,
+				5FC2B6C316548A110022FE8D /* libwebsocketpp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5FEF049B1646FAA20073E087 /* ofxWebsocketpp */ = {
+		5FC2B6B11654898C0022FE8D /* ofxWebsocketpp */ = {
 			isa = PBXGroup;
 			children = (
-				5FEF2B1A1646FCAC0073E087 /* include */,
-				5FEF2B111646FCA50073E087 /* src */,
-				5FEF049D1646FAB80073E087 /* libs */,
+				5FC2B6B5165489CE0022FE8D /* src */,
+				5FC2B6B4165489C20022FE8D /* include */,
+				5FC2B6B3165489BB0022FE8D /* libs */,
 			);
 			name = ofxWebsocketpp;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		5FEF049D1646FAB80073E087 /* libs */ = {
+		5FC2B6B3165489BB0022FE8D /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				5FEF049E1646FAB80073E087 /* boost */,
-				5FEF2ABD1646FABD0073E087 /* websocketpp */,
+				5FC2B6B7165489E60022FE8D /* websocketpp */,
+				5FC2B6B6165489DF0022FE8D /* boost */,
 			);
-			name = libs;
-			path = ../libs;
+			path = libs;
 			sourceTree = "<group>";
 		};
-		5FEF049E1646FAB80073E087 /* boost */ = {
+		5FC2B6B4165489C20022FE8D /* include */ = {
 			isa = PBXGroup;
 			children = (
-				5F27AD5116484E58000FD19B /* libboost_random-mt.a */,
-				5F27AD4F16484E42000FD19B /* libboost_regex-mt.a */,
-				5FEF2ABA1646FABD0073E087 /* libboost_date_time-mt.a */,
-				5FEF2ABB1646FABD0073E087 /* libboost_system-mt.a */,
-				5FEF2ABC1646FABD0073E087 /* libboost_thread-mt.a */,
+				5FC2B6C416548A330022FE8D /* ofxWebsocketppClient.h */,
+				5FC2B6C516548A330022FE8D /* ofxWebsocketppClientEvent.h */,
+				5FC2B6C616548A330022FE8D /* ofxWebsocketppClientHandler.h */,
+				5FC2B6C716548A330022FE8D /* ofxWebsocketppServer.h */,
+				5FC2B6C816548A330022FE8D /* ofxWebsocketppServerEvent.h */,
+				5FC2B6C916548A330022FE8D /* ofxWebsocketppServerHandler.h */,
+				5FC2B6D7165493AD0022FE8D /* ofxWebsocketpp.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		5FC2B6B5165489CE0022FE8D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5FC2B6CA16548A400022FE8D /* ofxWebsocketppClient.cpp */,
+				5FC2B6CB16548A400022FE8D /* ofxWebsocketppClientEvent.cpp */,
+				5FC2B6CC16548A400022FE8D /* ofxWebsocketppClientHandler.cpp */,
+				5FC2B6CD16548A400022FE8D /* ofxWebsocketppServer.cpp */,
+				5FC2B6CE16548A400022FE8D /* ofxWebsocketppServerEvent.cpp */,
+				5FC2B6CF16548A400022FE8D /* ofxWebsocketppServerHandler.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		5FC2B6B6165489DF0022FE8D /* boost */ = {
+			isa = PBXGroup;
+			children = (
+				5FC2B6B816548A0B0022FE8D /* libboost_date_time-mt.a */,
+				5FC2B6B916548A0B0022FE8D /* libboost_random-mt.a */,
+				5FC2B6BA16548A0B0022FE8D /* libboost_regex-mt.a */,
+				5FC2B6BB16548A0B0022FE8D /* libboost_system-mt.a */,
+				5FC2B6BC16548A0B0022FE8D /* libboost_thread-mt.a */,
 			);
 			path = boost;
 			sourceTree = "<group>";
 		};
-		5FEF2ABD1646FABD0073E087 /* websocketpp */ = {
+		5FC2B6B7165489E60022FE8D /* websocketpp */ = {
 			isa = PBXGroup;
 			children = (
-				5FEF2AFE1646FABD0073E087 /* libwebsocketpp.a */,
+				5FC2B6C216548A110022FE8D /* libwebsocketpp.a */,
 			);
 			path = websocketpp;
-			sourceTree = "<group>";
-		};
-		5FEF2B111646FCA50073E087 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				5FC2B690165485AB0022FE8D /* ofxWebsocketppClient.cpp */,
-				5FC2B691165485AB0022FE8D /* ofxWebsocketppClientEvent.cpp */,
-				5FC2B692165485AB0022FE8D /* ofxWebsocketppClientHandler.cpp */,
-			);
-			name = src;
-			path = ../src;
-			sourceTree = "<group>";
-		};
-		5FEF2B1A1646FCAC0073E087 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				5FC2B687165485550022FE8D /* ofxWebsocketppClient.h */,
-				5FC2B688165485550022FE8D /* ofxWebsocketppClientEvent.h */,
-				5FC2B689165485550022FE8D /* ofxWebsocketppClientHandler.h */,
-			);
-			name = include;
-			path = ../include;
 			sourceTree = "<group>";
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				5FEF049B1646FAA20073E087 /* ofxWebsocketpp */,
+				5FC2B6B11654898C0022FE8D /* ofxWebsocketpp */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -267,7 +282,7 @@
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E45BE5980E8CC70C009D7055 /* frameworks */,
-				E4B69B5B0A3A1756003C02F2 /* example-clientDebug.app */,
+				E4B69B5B0A3A1756003C02F2 /* example-server-clientDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -293,9 +308,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* example-client */ = {
+		E4B69B5A0A3A1756003C02F2 /* example-server-client */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-client" */;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-server-client" */;
 			buildPhases = (
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
@@ -307,9 +322,9 @@
 			dependencies = (
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
-			name = "example-client";
+			name = "example-server-client";
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* example-clientDebug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* example-server-clientDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -317,7 +332,7 @@
 /* Begin PBXProject section */
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-client" */;
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-server-client" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -338,7 +353,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				E4B69B5A0A3A1756003C02F2 /* example-client */,
+				E4B69B5A0A3A1756003C02F2 /* example-server-client */,
 			);
 		};
 /* End PBXProject section */
@@ -376,9 +391,12 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
-				5FC2B693165485AB0022FE8D /* ofxWebsocketppClient.cpp in Sources */,
-				5FC2B694165485AB0022FE8D /* ofxWebsocketppClientEvent.cpp in Sources */,
-				5FC2B695165485AB0022FE8D /* ofxWebsocketppClientHandler.cpp in Sources */,
+				5FC2B6D016548A400022FE8D /* ofxWebsocketppClient.cpp in Sources */,
+				5FC2B6D116548A400022FE8D /* ofxWebsocketppClientEvent.cpp in Sources */,
+				5FC2B6D216548A400022FE8D /* ofxWebsocketppClientHandler.cpp in Sources */,
+				5FC2B6D316548A400022FE8D /* ofxWebsocketppServer.cpp in Sources */,
+				5FC2B6D416548A400022FE8D /* ofxWebsocketppServerEvent.cpp in Sources */,
+				5FC2B6D516548A400022FE8D /* ofxWebsocketppServerHandler.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +425,6 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = "";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
 				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
@@ -420,7 +437,6 @@
 					"-mtune=native",
 				);
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "../../ofxWebsocketpp/libs/websocketpp/include/ ../../ofxWebsocketpp/libs/boost/include/";
 			};
 			name = Debug;
 		};
@@ -439,7 +455,6 @@
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_UNROLL_LOOPS = YES;
-				GCC_VERSION = "";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
 				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
@@ -452,7 +467,6 @@
 					"-mtune=native",
 				);
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "../../ofxWebsocketpp/libs/websocketpp/include/ ../../ofxWebsocketpp/libs/boost/include/";
 			};
 			name = Release;
 		};
@@ -539,10 +553,12 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../libs/boost\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/../libs/websocketpp\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/../libs/boost\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/../libs/websocketpp\"";
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				USER_HEADER_SEARCH_PATHS = "../../ofxWebsocketpp/libs/websocketpp/include/ ../../ofxWebsocketpp/libs/boost/include/";
@@ -632,10 +648,12 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../libs/boost\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/../libs/websocketpp\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/../libs/boost\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/../libs/websocketpp\"";
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../../ofxWebsocketpp/libs/websocketpp/include/ ../../ofxWebsocketpp/libs/boost/include/";
@@ -646,7 +664,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-client" */ = {
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-server-client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B4E0A3A1720003C02F2 /* Debug */,
@@ -655,7 +673,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-client" */ = {
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-server-client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B600A3A1757003C02F2 /* Debug */,

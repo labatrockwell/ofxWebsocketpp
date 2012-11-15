@@ -25,9 +25,7 @@
 
 
 namespace ofxWebsocketpp {
-    
-    
-    
+namespace wsServer {
     
     // The coordinator is a simple wrapper around an STL queue. add_event inserts
     // a new request. get_event returns the next available request and blocks
@@ -98,7 +96,7 @@ namespace ofxWebsocketpp {
     
     
     
-};  // end namespace
+}};  // end namespaces
 
 
 
