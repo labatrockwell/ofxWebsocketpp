@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __parisServer__ofxWebsocketppClientHandler__
-#define __parisServer__ofxWebsocketppClientHandler__
+#ifndef ofxWebsocketppClientHandler__
+#define ofxWebsocketppClientHandler__
 
 // remove MacTypes.h clash with boost
 #ifdef nil

@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __parisServer__ofxWebsocketppServerHandler__
-#define __parisServer__ofxWebsocketppServerHandler__
+#ifndef ofxWebsocketppServerHandler__
+#define ofxWebsocketppServerHandler__
 
 
 #include "websocketpp.hpp"

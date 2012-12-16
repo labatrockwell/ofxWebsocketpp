@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __parisProject__ofxWebsocketppServer__
-#define __parisProject__ofxWebsocketppServer__
+#ifndef ofxWebsocketppServer__
+#define ofxWebsocketppServer__
 
 #include <iostream>
 
