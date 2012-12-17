@@ -72,7 +72,7 @@
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>libboost_date_time-vc100-mt-gd-1_47.lib;libboost_random-vc100-mt-gd-1_47.lib;libboost_regex-vc100-mt-gd-1_47.lib;libboost_system-vc100-mt-gd-1_47.lib;libboost_thread-vc100-mt-s-gd-1_47.lib;websocketpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\..\addons\ofxWebsocketpp\libs\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\addons\ofxWebsocketpp\libs\websocketpp\windows\vcpp2010\Release;..\..\..\addons\ofxWebsocketpp\libs\boost\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
   </ItemDefinitionGroup>
