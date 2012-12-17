@@ -41,7 +41,7 @@
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bin\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">obj\$(Configuration)\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">bin\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">obj\$(Configuration)\</IntDir>
@@ -55,12 +55,13 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxWebsocketpp\libs\;..\..\..\addons\ofxWebsocketpp\libs\websocketpp\src;..\..\..\addons\ofxWebsocketpp\include;..\..\..\addons\ofxWebsocketpp\src;..\..\..\addons\ofxWebsocketpp\libs\boost</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0501;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxWebsocketpp\include;..\..\..\addons\ofxWebsocketpp\src;..\..\..\addons\ofxWebsocketpp\libs\websocketpp\src;..\..\..\addons\ofxWebsocketpp\libs\boost</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WIN32_LEAN_AND_MEAN;NOCOMM;_WIN32_WINNT=0x0600;POCO_NO_UNWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
@@ -70,7 +71,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalDependencies>websocketpp.lib;boost_date_time-vc100-mt-1_51.dll;boost_random-vc100-mt-1_51.dll;boost_regex-vc100-mt-1_51.dll;boost_system-vc100-mt-1_51.dll;boost_thread-vc100-mt-1_51.dll;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libboost_date_time-vc100-mt-gd-1_47.lib;libboost_random-vc100-mt-gd-1_47.lib;libboost_regex-vc100-mt-gd-1_47.lib;libboost_system-vc100-mt-gd-1_47.lib;libboost_thread-vc100-mt-s-gd-1_47.lib;websocketpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\addons\ofxWebsocketpp\libs\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
@@ -78,12 +79,12 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;WIN32_LEAN_AND_MEAN;NOCOMM;_WIN32_WINNT=0x0600;POCO_NO_UNWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat />
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxWebsocketpp\libs\;..\..\..\addons\ofxWebsocketpp\libs\boost;..\..\..\addons\ofxWebsocketpp\libs\websocketpp\src;..\..\..\addons\ofxWebsocketpp\include;..\..\..\addons\ofxWebsocketpp\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofxWebsocketpp\include;..\..\..\addons\ofxWebsocketpp\src;..\..\..\addons\ofxWebsocketpp\libs\websocketpp\src;..\..\..\addons\ofxWebsocketpp\libs\boost</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -95,8 +96,8 @@
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
-      <AdditionalDependencies>boost_date_time-vc100-mt-1_51.lib;boost_random-vc100-mt-1_51.lib;boost_regex-vc100-mt-1_51.lib;boost_system-vc100-mt-1_51.lib;boost_thread-vc100-mt-1_51.lib;websocketpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\..\addons\ofxWebsocketpp\libs\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libboost_date_time-vc100-mt-1_47.lib;libboost_random-vc100-mt-1_47.lib;libboost_regex-vc100-mt-1_47.lib;libboost_system-vc100-mt-1_47.lib;libboost_thread-vc100-mt-s-1_47.lib;websocketpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\addons\ofxWebsocketpp\libs\websocketpp\windows\vcpp2010\Release;..\..\..\addons\ofxWebsocketpp\libs\boost\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
   </ItemDefinitionGroup>

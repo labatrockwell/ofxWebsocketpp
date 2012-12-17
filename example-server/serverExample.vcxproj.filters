@@ -8,39 +8,39 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxWebsocketppClientHandler.cpp">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxWebsocketppServer.cpp">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxWebsocketppServerEvent.cpp">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxWebsocketppServerHandler.cpp">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxWebsocketppClient.cpp">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxWebsocketppClientEvent.cpp">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
       <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="addons">
+    <Filter Include="src\addons">
       <UniqueIdentifier>{e8d4a7c2-da88-4265-9a53-67a31c29038b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="addons\ofxWebsocketpp">
+    <Filter Include="src\addons\ofxWebsocketpp">
       <UniqueIdentifier>{3bfb1f9d-1ba3-4b46-b4c0-3758c19e3a2c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="addons\ofxWebsocketpp\src">
+    <Filter Include="src\addons\ofxWebsocketpp\src">
       <UniqueIdentifier>{c051265f-4973-42d4-90c9-26d1b5b203fc}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="addons\ofxWebsocketpp\libs">
+    <Filter Include="src\addons\ofxWebsocketpp\libs">
       <UniqueIdentifier>{c712dbda-ccc3-40a9-baf1-22a462f497e9}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
@@ -50,25 +50,25 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ofxWebsocketpp.h">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ofxWebsocketppClient.h">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ofxWebsocketppClientEvent.h">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ofxWebsocketppClientHandler.h">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ofxWebsocketppServer.h">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ofxWebsocketppServerEvent.h">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ofxWebsocketppServerHandler.h">
-      <Filter>addons\ofxWebsocketpp\src</Filter>
+      <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
