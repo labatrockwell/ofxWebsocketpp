@@ -9,9 +9,13 @@ void testApp::setup(){
     m_server_ptr->addListener(this);
     m_server_ptr->startServer();
     
+    
+    // uncomment the client and they will ping back and forth
+    /*
     m_client_ptr = new wsClient::client();
     m_client_ptr->addListener(this);
     m_client_ptr->connect("ws://localhost:9001/");
+     */ 
 }
 
 //--------------------------------------------------------------
