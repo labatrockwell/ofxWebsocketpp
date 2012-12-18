@@ -28,14 +28,14 @@ public:
     void sendString(ofxWebsocketpp::wsServer::server::connection_ptr con, const string& str);
     void sendBinary(ofxWebsocketpp::wsServer::server::connection_ptr con, const string& binary);
     
-    void onSocketMessage(ofxWebsocketpp::wsServer::websocketMessageEvent &event);
-    void onSocketHandshake(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
-    void onSocketValidate(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
-    void onSocketOpen(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
-    void onSocketClose(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
-    void onSocketFail(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
-    void onSocketHttp(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
-    void onSocketPing(ofxWebsocketpp::wsServer::websocketPingEvent &event);
-    void onSocketPong(ofxWebsocketpp::wsServer::websocketPingEvent &event);
-    void onSocketPongFail(ofxWebsocketpp::wsServer::websocketPingEvent &event);
+    void onServerSocketMessage(ofxWebsocketpp::wsServer::websocketMessageEvent &event);
+    void onServerSocketHandshake(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
+    void onServerSocketValidate(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
+    void onServerSocketOpen(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
+    void onServerSocketClose(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
+    void onServerSocketFail(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
+    void onServerSocketHttp(ofxWebsocketpp::wsServer::websocketConnectionEvent &event);
+    void onServerSocketPing(ofxWebsocketpp::wsServer::websocketPingEvent &event);
+    void onServerSocketPong(ofxWebsocketpp::wsServer::websocketPingEvent &event);
+    void onServerSocketPongFail(ofxWebsocketpp::wsServer::websocketPingEvent &event);
 };

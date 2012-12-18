@@ -7,9 +7,6 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ofxWebsocketppClientHandler.cpp">
-      <Filter>src\addons\ofxWebsocketpp\src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\ofxWebsocketppServer.cpp">
       <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClCompile>
@@ -17,12 +14,6 @@
       <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxWebsocketppServerHandler.cpp">
-      <Filter>src\addons\ofxWebsocketpp\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ofxWebsocketppClient.cpp">
-      <Filter>src\addons\ofxWebsocketpp\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ofxWebsocketppClientEvent.cpp">
       <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,15 +41,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ofxWebsocketpp.h">
-      <Filter>src\addons\ofxWebsocketpp\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\ofxWebsocketppClient.h">
-      <Filter>src\addons\ofxWebsocketpp\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\ofxWebsocketppClientEvent.h">
-      <Filter>src\addons\ofxWebsocketpp\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\ofxWebsocketppClientHandler.h">
       <Filter>src\addons\ofxWebsocketpp\src</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ofxWebsocketppServer.h">

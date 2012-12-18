@@ -38,11 +38,9 @@ namespace wsClient {
         
         void on_message(connection_ptr con, message_ptr msg);
         void on_handshake_init (connection_ptr con);
-        void validate (connection_ptr con);
         void on_open (connection_ptr con);
         void on_close (connection_ptr con);
         void on_fail (connection_ptr con);
-        void http (connection_ptr con);
         bool on_ping (connection_ptr con, std::string data);
         void on_pong (connection_ptr con, std::string data);
         void on_pong_timeout (connection_ptr con, std::string data);

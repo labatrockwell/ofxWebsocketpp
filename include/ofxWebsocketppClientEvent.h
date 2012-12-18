@@ -62,14 +62,6 @@ namespace wsClient {
         void triggerEvent();
     };
     
-    class websocketConnectionEventValidate : public websocketConnectionEvent {
-    public:
-        websocketConnectionEventValidate(connection_ptr connection)
-        : websocketConnectionEvent(connection) { }
-        
-        void triggerEvent();
-    };
-    
     class websocketConnectionEventOpen : public websocketConnectionEvent {
     public:
         websocketConnectionEventOpen(connection_ptr connection)
@@ -89,14 +81,6 @@ namespace wsClient {
     class websocketConnectionEventFail : public websocketConnectionEvent {
     public:
         websocketConnectionEventFail(connection_ptr connection)
-        : websocketConnectionEvent(connection) { }
-        
-        void triggerEvent();
-    };
-    
-    class websocketConnectionEventHttp : public websocketConnectionEvent {
-    public:
-        websocketConnectionEventHttp(connection_ptr connection)
         : websocketConnectionEvent(connection) { }
         
         void triggerEvent();

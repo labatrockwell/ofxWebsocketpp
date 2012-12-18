@@ -35,11 +35,6 @@ namespace wsClient{
         websocketConnectionEventHandshake(con).triggerEvent();
     }
     
-    void client_handler::validate (connection_ptr con)
-    {
-        websocketConnectionEventValidate(con).triggerEvent();
-    }
-    
     void client_handler::on_open (connection_ptr con)
     {
         websocketConnectionEventOpen(con).triggerEvent();
@@ -53,11 +48,6 @@ namespace wsClient{
     void client_handler::on_fail (connection_ptr con)
     {
         websocketConnectionEventFail(con).triggerEvent();
-    }
-    
-    void client_handler::http (connection_ptr con)
-    {
-        websocketConnectionEventHttp(con).triggerEvent();
     }
     
     

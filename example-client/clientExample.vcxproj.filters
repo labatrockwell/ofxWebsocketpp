@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\testApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxWebsocketppClient.cpp">
+      <Filter>src\ofxWebsocketpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxWebsocketppClientHandler.cpp">
+      <Filter>src\ofxWebsocketpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxWebsocketppClientEvent.cpp">
+      <Filter>src\ofxWebsocketpp\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ofxWebsocketpp">
+      <UniqueIdentifier>{357900a5-016d-42e1-a2c6-b4f110a6122d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ofxWebsocketpp\src">
+      <UniqueIdentifier>{943392d5-cfa0-422b-9eeb-8dc5b184c6f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\testApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ofxWebsocketppClientHandler.h">
+      <Filter>src\ofxWebsocketpp\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ofxWebsocketpp.h">
+      <Filter>src\ofxWebsocketpp\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ofxWebsocketppClient.h">
+      <Filter>src\ofxWebsocketpp\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ofxWebsocketppClientEvent.h">
+      <Filter>src\ofxWebsocketpp\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

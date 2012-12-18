@@ -6,7 +6,7 @@ using namespace ofxWebsocketpp::wsClient;
 void testApp::setup(){
 
     m_client.addListener(this);
-    m_client.connect("ws://localhost:9001/");
+    m_client.connect("ws://127.0.0.1:9001/");
     ofSetWindowShape(400, 200);
 }
 
@@ -96,45 +96,45 @@ void sendBinary(client::connection_ptr con, const string& binary)
     con->send(binary, websocketpp::frame::opcode::BINARY);
 }
 
-void testApp::onSocketMessage(websocketMessageEvent &event)
+void testApp::onClientSocketMessage(websocketMessageEvent &event)
 {
     static int i=0;
     cout << "got message event!  " << (i++) << endl;
     event.connection->send("HI!");
 }
 
-void testApp::onSocketHandshake(websocketConnectionEvent &event)
+void testApp::onClientSocketHandshake(websocketConnectionEvent &event)
 {
     cout << "handshake!" << endl;
 }
 
-void testApp::onSocketOpen(websocketConnectionEvent &event)
+void testApp::onClientSocketOpen(websocketConnectionEvent &event)
 {
     cout << "socket open!" << endl;
     event.connection->send("Hello");
 }
 
-void testApp::onSocketClose(websocketConnectionEvent &event)
+void testApp::onClientSocketClose(websocketConnectionEvent &event)
 {
     cout << "socket close!" << endl;
 }
 
-void testApp::onSocketFail(websocketConnectionEvent &event)
+void testApp::onClientSocketFail(websocketConnectionEvent &event)
 {
     cout << "socket fail!" << endl;
 }
 
-void testApp::onSocketPing(websocketPingEvent &event)
+void testApp::onClientSocketPing(websocketPingEvent &event)
 {
     cout << "ping!" << endl;
 }
 
-void testApp::onSocketPong(websocketPingEvent &event)
+void testApp::onClientSocketPong(websocketPingEvent &event)
 {
     cout << "pong!" << endl;
 }
 
-void testApp::onSocketPongFail(websocketPingEvent &event)
+void testApp::onClientSocketPongFail(websocketPingEvent &event)
 {
     cout << "pong fail!" << endl;
 }
