@@ -55,13 +55,16 @@ namespace wsClient {
         return true;
     }
 
+    client::connection_ptr client::getConnection()
+    {
+        return m_connection_ptr;
+    }
 
     // of calls this
     void client::threadedFunction()
     {
         try {
             websocketpp::client::handler::ptr handler(new client_handler());
-            websocketpp::client::connection_ptr con;
             websocketpp::client endpoint(handler);
             
             //endpoint.alog().unset_level(websocketpp::log::alevel::ALL);
@@ -71,7 +74,7 @@ namespace wsClient {
             endpoint.alog().set_level(websocketpp::log::alevel::ALL);
             endpoint.elog().set_level(websocketpp::log::elevel::ALL);
             
-            con = endpoint.connect(m_uri);
+            m_connection_ptr = endpoint.connect(m_uri);
             m_endpoint_ptr = &endpoint;
             
             // TODO check the status of con, and if the connecton is bad

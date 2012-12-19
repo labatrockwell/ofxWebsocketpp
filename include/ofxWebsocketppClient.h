@@ -48,6 +48,8 @@ namespace wsClient {
         // returns false if you try to disconnect while connecting, etc
         bool disconnect();
 
+        connection_ptr getConnection();
+        
         // LV TODO figure out how we can let user pick which functions they want
         template<class T>
         void addListener(T * app){
@@ -86,6 +88,8 @@ namespace wsClient {
         
         string m_uri;
         STATE m_state;
+        
+        connection_ptr m_connection_ptr;
         
         websocketpp::client* m_endpoint_ptr;
         

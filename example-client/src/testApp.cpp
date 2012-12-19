@@ -31,7 +31,9 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-
+    if( m_client.getClientState() == client::CONNECTED ) {
+        sendString( m_client.getConnection(), "Key pressed." );
+    }
 }
 
 //--------------------------------------------------------------
@@ -55,7 +57,9 @@ void testApp::mousePressed(int x, int y, int button){
         if(x > 0 && x < 200) {
             m_client.disconnect();
         } else if( x > 200 && x < 400) {
-            m_client.connect("ws://localhost:9001/");
+            if( m_client.getClientState() == client::CONNECTED ) {
+                m_client.connect("ws://localhost:9001/");
+            }
         }
     }
 }
@@ -84,12 +88,12 @@ void testApp::dragEvent(ofDragInfo dragInfo){
 // *************************************************************
 // *************************************************************
 
-void sendString(client::connection_ptr con, const string& str)
+void testApp::sendString(client::connection_ptr con, const string& str)
 {
     con->send(str);
 }
 
-void sendBinary(client::connection_ptr con, const string& binary)
+void testApp::sendBinary(client::connection_ptr con, const string& binary)
 {
     // unfortunately there's no good way to expose the BINARY enum
     // through the wrapper class as it's an Enum
@@ -100,7 +104,7 @@ void testApp::onClientSocketMessage(websocketMessageEvent &event)
 {
     static int i=0;
     cout << "got message event!  " << (i++) << endl;
-    event.connection->send("HI!");
+    //event.connection->send("HI!");
 }
 
 void testApp::onClientSocketHandshake(websocketConnectionEvent &event)
