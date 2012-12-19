@@ -2,6 +2,9 @@
 */bin/*
 !*/bin/data
 
+#ignore boost headers 
+libs/boost
+
 # apps
 *.app
 
