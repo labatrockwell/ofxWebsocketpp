@@ -50,8 +50,9 @@ namespace wsServer{
         typedef websocketpp::server::handler::message_ptr       message_ptr;
         
         // will not block
-        void broadcast();
-        std::set< connection_ptr > getConnections();
+        // TODO implement these
+        //void broadcast();
+        //std::set< connection_ptr > getConnections();
 
         
         // LV TODO figure out how we can let user pick which functions they want
