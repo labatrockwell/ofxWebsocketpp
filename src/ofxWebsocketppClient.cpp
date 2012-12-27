@@ -14,6 +14,7 @@ namespace wsClient {
 
     client::client()
     {
+        // TODO rely on the websocketpp states not our internal states
         m_state = DISCONNECTED;
         m_endpoint_ptr = NULL;
     }
@@ -46,11 +47,18 @@ namespace wsClient {
             return false;
         }
 
-        // don't use clean close in threaded environment
-        m_endpoint_ptr->stop(false);
+        m_connection_ptr->close(websocketpp::close::status::NORMAL, "");
+        m_connection_ptr.reset();
+        
+        // probably redundant
+        m_endpoint_ptr->close_all(websocketpp::close::status::NORMAL, "");
+        m_endpoint_ptr->stop();
+        
         m_endpoint_ptr = NULL;
         m_state = DISCONNECTED;
+        
         stopThread();
+        
         cout << "Socket closed." << endl;
         return true;
     }
@@ -63,6 +71,7 @@ namespace wsClient {
     // of calls this
     void client::threadedFunction()
     {
+        cout << "new threaded func" << endl;
         try {
             websocketpp::client::handler::ptr handler(new client_handler());
             websocketpp::client endpoint(handler);

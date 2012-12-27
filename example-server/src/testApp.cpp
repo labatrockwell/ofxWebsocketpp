@@ -6,6 +6,7 @@ using namespace ofxWebsocketpp::wsServer;
 void testApp::setup(){
     
     ofSetWindowShape(400, 200);
+    ofSetFrameRate(30);
     
     m_server_ptr = new server(9001, 1, 1);
     m_server_ptr->addListener(this);

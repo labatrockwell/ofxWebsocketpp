@@ -5,8 +5,10 @@ using namespace ofxWebsocketpp::wsClient;
 //--------------------------------------------------------------
 void testApp::setup(){
 
+    ofSetFrameRate(30);
+    
     m_client.addListener(this);
-    m_client.connect("ws://127.0.0.1:9001/");
+    //m_client.connect("ws://127.0.0.1:9001/");
     ofSetWindowShape(400, 200);
 }
 
@@ -57,7 +59,7 @@ void testApp::mousePressed(int x, int y, int button){
         if(x > 0 && x < 200) {
             m_client.disconnect();
         } else if( x > 200 && x < 400) {
-            if( m_client.getClientState() == client::CONNECTED ) {
+            if( m_client.getClientState() == client::DISCONNECTED ) {
                 m_client.connect("ws://localhost:9001/");
             }
         }

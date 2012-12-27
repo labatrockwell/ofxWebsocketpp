@@ -32,6 +32,7 @@ namespace wsServer {
         if(m_csh != NULL && m_rs != NULL) {
             // if m_csh or m_rs are null then we are already shut/shutting down
             m_csh->shutdown();
+            // TODO close out these connections gracefully
             m_rs->stop(false);
         }
         
