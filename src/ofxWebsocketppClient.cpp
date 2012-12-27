@@ -15,6 +15,9 @@ namespace wsClient {
     client::client()
     {
         // TODO rely on the websocketpp states not our internal states
+        
+        // TODO client thinks it is connected when no server is present
+        
         m_state = DISCONNECTED;
         m_endpoint_ptr = NULL;
     }
@@ -46,12 +49,10 @@ namespace wsClient {
         if(m_state != CONNECTED || !isThreadRunning() ) {
             return false;
         }
-
+        
         m_connection_ptr->close(websocketpp::close::status::NORMAL, "");
         m_connection_ptr.reset();
         
-        // probably redundant
-        m_endpoint_ptr->close_all(websocketpp::close::status::NORMAL, "");
         m_endpoint_ptr->stop();
         
         m_endpoint_ptr = NULL;
@@ -65,7 +66,11 @@ namespace wsClient {
 
     client::connection_ptr client::getConnection()
     {
-        return m_connection_ptr;
+        if( m_state == CONNECTED ) {
+            return m_connection_ptr;
+        } else {
+            return NULL;
+        }
     }
 
     // of calls this
@@ -83,6 +88,7 @@ namespace wsClient {
             endpoint.alog().set_level(websocketpp::log::alevel::ALL);
             endpoint.elog().set_level(websocketpp::log::elevel::ALL);
             
+            m_connection_ptr.reset();
             m_connection_ptr = endpoint.connect(m_uri);
             m_endpoint_ptr = &endpoint;
             
@@ -93,6 +99,10 @@ namespace wsClient {
             endpoint.alog().at(websocketpp::log::alevel::DEVEL) << "endpoint running.\n";
             endpoint.run();
             endpoint.alog().at(websocketpp::log::alevel::DEVEL) << "endpoint finished.\n";
+            
+            // could be because of a fail, clean up the connection
+            m_connection_ptr->close(websocketpp::close::status::NORMAL, "");
+            m_connection_ptr.reset();
             
             m_state = DISCONNECTED;
             m_endpoint_ptr = NULL;
