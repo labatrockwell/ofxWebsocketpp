@@ -66,11 +66,7 @@ namespace wsClient {
 
     client::connection_ptr client::getConnection()
     {
-        if( m_state == CONNECTED ) {
-            return m_connection_ptr;
-        } else {
-            return NULL;
-        }
+        return m_connection_ptr;
     }
 
     // of calls this
