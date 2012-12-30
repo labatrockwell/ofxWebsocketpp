@@ -21,11 +21,13 @@ Hardware Requirements:
 
 Dependencies:
 * Boost 1.50.0.0
-* websocketpp
+* websocketpp @ commit 27a6d6f4d337c254c732df57531e9bc3d37d70d8
 
 Installation
 * Download Boost 1.50.00 and place the headers in ofxWebsocketpp/lib/boost/include/ .  Example header path is ofxWebsocketpp/libs/boost/include/boost/version.hpp .  If you already have Boost installed adjust the "User Header Search Paths" to reflect this
 * Checkout the websocketpp submodule
+  - git reset --hard 27a6d6f4d337c254c732df57531e9bc3d37d70d8
+  - this will move to an older websocketpp checkin for compatability
 
 Compilation
 * Start with the base examples.  If you chose to start from scratch you will need to
