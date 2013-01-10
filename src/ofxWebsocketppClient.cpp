@@ -14,19 +14,23 @@ namespace wsClient {
 
     client::client()
     {
-        // TODO rely on the websocketpp states not our internal states
-        
-        // TODO client thinks it is connected when no server is present
-        
-        m_state = DISCONNECTED;
         m_endpoint_ptr = NULL;
+    }
+    
+    websocketpp::session::state::value client::getState()
+    {
+        if( m_connection ) {
+            return m_connection->get_state();
+        }
+        
+        return websocketpp::session::state::CLOSED;
     }
     
     bool client::connect(std::string uri)
     {
-        if(m_state != DISCONNECTED || isThreadRunning() ) {
+        if(m_connection && (m_connection->get_state() != websocketpp::session::state::CLOSED || isThreadRunning()) ) {
             
-            string errStr = "Called ofxWebsocketpp connect while the client is connected or thread is already running.\nCall disconnect first.\n";
+            string errStr = "Called ofxWebsocketpp connect while the client is != CLOSED or thread is already running.\nCall disconnect first.\n";
             
             if(m_endpoint_ptr != NULL) {
                 m_endpoint_ptr->elog().at(websocketpp::log::elevel::WARN) << errStr;
@@ -38,7 +42,6 @@ namespace wsClient {
         }
         
         m_uri = uri;
-        m_state = CONNECTING;
         startThread();
      
         return true;
@@ -46,17 +49,33 @@ namespace wsClient {
     
     bool client::disconnect()
     {
-        if(m_state != CONNECTED || !isThreadRunning() ) {
+        if(m_connection && m_connection->get_state() == websocketpp::session::state::CLOSED && !isThreadRunning() ) {
+            
+            string errStr = "Called ofxWebsocketpp disconnect while the client == CLOSED and thread is not running.\n";
+            
+            if(m_endpoint_ptr != NULL) {
+                m_endpoint_ptr->elog().at(websocketpp::log::elevel::WARN) << errStr;
+            } else {
+                cerr << errStr << endl;
+            }
+            
+            if( m_endpoint_ptr != NULL ) {
+                m_connection.reset();
+                
+                m_endpoint_ptr->stop();
+                m_endpoint_ptr = NULL;
+            }
             return false;
         }
+        if( m_connection ) {
+            m_connection->close(websocketpp::close::status::NORMAL, "");
+            m_connection.reset();
+        }
         
-        m_connection_ptr->close(websocketpp::close::status::NORMAL, "");
-        m_connection_ptr.reset();
-        
-        m_endpoint_ptr->stop();
-        
-        m_endpoint_ptr = NULL;
-        m_state = DISCONNECTED;
+        if( m_endpoint_ptr ) {
+            m_endpoint_ptr->stop();
+            m_endpoint_ptr = NULL;
+        }
         
         stopThread();
         
@@ -66,7 +85,7 @@ namespace wsClient {
 
     client::connection_ptr client::getConnection()
     {
-        return m_connection_ptr;
+        return m_connection;
     }
 
     // of calls this
@@ -84,30 +103,27 @@ namespace wsClient {
             endpoint.alog().set_level(websocketpp::log::alevel::ALL);
             endpoint.elog().set_level(websocketpp::log::elevel::ALL);
             
-            m_connection_ptr.reset();
-            m_connection_ptr = endpoint.connect(m_uri);
+            m_connection.reset();
+            m_connection = endpoint.connect(m_uri);
             m_endpoint_ptr = &endpoint;
-            
-            // TODO check the status of con, and if the connecton is bad
-            //  never enter the CONNECTED state, even if for just a second
-            m_state = CONNECTED;
-            
+                        
             endpoint.alog().at(websocketpp::log::alevel::DEVEL) << "endpoint running.\n";
             endpoint.run();
             endpoint.alog().at(websocketpp::log::alevel::DEVEL) << "endpoint finished.\n";
             
             // could be because of a fail, clean up the connection
-            m_connection_ptr->close(websocketpp::close::status::NORMAL, "");
-            m_connection_ptr.reset();
+            if( m_connection ) {
+                m_connection->close(websocketpp::close::status::NORMAL, "");
+            }
+            m_connection.reset();
             
-            m_state = DISCONNECTED;
             m_endpoint_ptr = NULL;
             
         } catch (std::exception& e) {
             
             m_endpoint_ptr = NULL;
-            m_state = DISCONNECTED;
             cerr << "Exception connecting: " << e.what() << endl;
         }
     }
 }};  // end namespaces
+

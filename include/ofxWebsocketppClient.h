@@ -33,15 +33,11 @@ namespace wsClient {
         
         typedef websocketpp::client::handler::connection_ptr    connection_ptr;
         typedef websocketpp::client::handler::message_ptr       message_ptr;
-        
-        enum STATE {CONNECTING, CONNECTED, DISCONNECTED};
-        
+        typedef websocketpp::session::state::value              state;
 
         client();
         
-        STATE getClientState() {
-            return m_state;
-        }
+        state getState();
         
         bool connect(string uri);
         
@@ -87,9 +83,8 @@ namespace wsClient {
         void threadedFunction();
         
         string m_uri;
-        STATE m_state;
         
-        connection_ptr m_connection_ptr;
+        connection_ptr m_connection;
         
         websocketpp::client* m_endpoint_ptr;
         

@@ -33,7 +33,7 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-    if( m_client.getClientState() == client::CONNECTED ) {
+    if( m_client.getState() == websocketpp::session::state::OPEN ) {
         sendString( m_client.getConnection(), "Key pressed." );
     }
 }
@@ -59,9 +59,7 @@ void testApp::mousePressed(int x, int y, int button){
         if(x > 0 && x < 200) {
             m_client.disconnect();
         } else if( x > 200 && x < 400) {
-            if( m_client.getClientState() == client::DISCONNECTED ) {
-                m_client.connect("ws://localhost:9001/");
-            }
+            m_client.connect("ws://localhost:9001/");
         }
     }
 }
@@ -112,12 +110,12 @@ void testApp::onClientSocketMessage(websocketMessageEvent &event)
 void testApp::onClientSocketHandshake(websocketConnectionEvent &event)
 {
     cout << "handshake!" << endl;
+    event.connection->send("Hello");
 }
 
 void testApp::onClientSocketOpen(websocketConnectionEvent &event)
 {
-    cout << "socket open!" << endl;
-    event.connection->send("Hello");
+    cout << "socket open attempt!" << endl;
 }
 
 void testApp::onClientSocketClose(websocketConnectionEvent &event)
