@@ -28,7 +28,7 @@ namespace wsClient {
     
     bool client::connect(std::string uri)
     {
-        if(m_connection && (m_connection->get_state() != websocketpp::session::state::CLOSED || isThreadRunning()) ) {
+        if(m_connection && (m_connection->get_state() != websocketpp::session::state::CLOSED) ) {
             
             string errStr = "Called ofxWebsocketpp connect while the client is != CLOSED or thread is already running.\nCall disconnect first.\n";
             
@@ -49,9 +49,9 @@ namespace wsClient {
     
     bool client::disconnect()
     {
-        if(m_connection && m_connection->get_state() == websocketpp::session::state::CLOSED && !isThreadRunning() ) {
+        if(m_connection && m_connection->get_state() != websocketpp::session::state::OPEN) {
             
-            string errStr = "Called ofxWebsocketpp disconnect while the client == CLOSED and thread is not running.\n";
+            string errStr = "Called ofxWebsocketpp disconnect while the client != OPEN.  Wait for state to complete.";
             
             if(m_endpoint_ptr != NULL) {
                 m_endpoint_ptr->elog().at(websocketpp::log::elevel::WARN) << errStr;
@@ -67,6 +67,7 @@ namespace wsClient {
             }
             return false;
         }
+
         if( m_connection ) {
             m_connection->close(websocketpp::close::status::NORMAL, "");
             m_connection.reset();
