@@ -5,5 +5,14 @@ OF_PATH = ../../..
 //THIS HAS ALL THE HEADER AND LIBS FOR OF CORE
 #include "../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig"
 
-OTHER_LDFLAGS = $(OF_CORE_LIBS) 
-HEADER_SEARCH_PATHS = $(OF_CORE_HEADERS)
+BOOST_LIBS_PATHS = /opt/local/lib
+BOOST_LIBS = $(BOOST_LIBS_PATHS)/libboost_date_time-mt.a $(BOOST_LIBS_PATHS)/libboost_random-mt.a $(BOOST_LIBS_PATHS)/libboost_regex-mt.a $(BOOST_LIBS_PATHS)/libboost_system-mt.a $(BOOST_LIBS_PATHS)/libboost_thread-mt.a
+BOOST_HEADERS = /opt/local/include
+
+WEBSOCKETPP_SRC = ../../../addons/ofxWebsocketpp/libs/websocketpp/src
+WEBSOCKETPP_LIBS_PATH = ../../../addons/ofxWebsocketpp/libs/mac/
+WEBSOCKETPP_LIBS = $(WEBSOCKETPP_LIBS_PATH)/libwebsocketpp.a
+
+LIBRARY_SEARCH_PATHS = $(BOOST_LIBS_PATHS) $(WEBSOCKETPP_LIBS_PATH)
+OTHER_LDFLAGS = $(OF_CORE_LIBS) $(BOOST_LIBS)  $(WEBSOCKETPP_LIBS)
+HEADER_SEARCH_PATHS = $(OF_CORE_HEADERS) $(BOOST_HEADERS) $(WEBSOCKETPP_SRC)

@@ -8,32 +8,29 @@ Description:
 
 
 Documentation
-* Example client, server, and client-server
+* Example client, server, and client-server.
+* All examples are obvious, the client-server example needs the client part in testApp.cpp commented out and then client and server will send messages back and forth nonstop.
 
 
 ************************************************
  SETUP 
 ************************************************
 Hardware Requirements:
-* Current inluded libraries (boost, websocketpp) are only included for OS X 32bit.
-* Win dll's will be included in the near future.
-* Mobile support will be developed long term
+* A computer of sorts.
 
 Dependencies:
-* Boost 1.50.0.0
+* Boost.  Tested for OS X @ 1.50 (what I had installed), Win 7 @ 1.47 (per websocketpp recommendation)
 * websocketpp @ commit 27a6d6f4d337c254c732df57531e9bc3d37d70d8
 
 Installation
-* Download Boost 1.50.00 and place the headers in ofxWebsocketpp/lib/boost/include/ .  Example header path is ofxWebsocketpp/libs/boost/include/boost/version.hpp .  If you already have Boost installed adjust the "User Header Search Paths" to reflect this
+* Install boost.  HomeBrew or MacPorts, or just download.  
+  * OS X, edit the Project.xcconfig file so that BOOST_LIBS_PATHS and BOOST_HEADERS point to the appropriate locations.
+  * Visual studio, 
 * Checkout the websocketpp submodule
-  - git reset --hard 27a6d6f4d337c254c732df57531e9bc3d37d70d8
-  - this will move to an older websocketpp checkin for compatability
+  - git submodule update
 
 Compilation
-* Start with the base examples.  If you chose to start from scratch you will need to
-  - Add libraries into your new XCode project
-  - Add appropriate ofxWebsocketpp header/src to project 
-  - Add header paths for Boost and websocketpp to project.  "User Header Search Paths" has these two paths.
+* Start with the base examples.  You depend on the websocketpp headers
 
 ************************************************
  RUN 

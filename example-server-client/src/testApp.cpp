@@ -5,7 +5,7 @@ using namespace ofxWebsocketpp;
 //--------------------------------------------------------------
 void testApp::setup(){
     
-    m_server_ptr = new wsServer::server(9001, 1, 1);
+    m_server_ptr = new wsServer::server(9001, 5, 5);
     m_server_ptr->addListener(this);
     m_server_ptr->startServer();
     

@@ -69,12 +69,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5F03141E1655487100AED83B /* libboost_date_time-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_date_time-mt.a"; sourceTree = "<group>"; };
-		5F03141F1655487100AED83B /* libboost_random-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_random-mt.a"; sourceTree = "<group>"; };
-		5F0314201655487100AED83B /* libboost_regex-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_regex-mt.a"; sourceTree = "<group>"; };
-		5F0314211655487100AED83B /* libboost_system-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_system-mt.a"; sourceTree = "<group>"; };
-		5F0314221655487100AED83B /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libboost_thread-mt.a"; sourceTree = "<group>"; };
-		5F0314231655487100AED83B /* libwebsocketpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebsocketpp.a; sourceTree = "<group>"; };
+		5F03141E1655487100AED83B /* libboost_date_time-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_date_time-mt.a"; path = "/opt/local/lib/libboost_date_time-mt.a"; sourceTree = "<absolute>"; };
+		5F03141F1655487100AED83B /* libboost_random-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_random-mt.a"; path = "/opt/local/lib/libboost_random-mt.a"; sourceTree = "<absolute>"; };
+		5F0314201655487100AED83B /* libboost_regex-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_regex-mt.a"; path = "/opt/local/lib/libboost_regex-mt.a"; sourceTree = "<absolute>"; };
+		5F0314211655487100AED83B /* libboost_system-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_system-mt.a"; path = "/opt/local/lib/libboost_system-mt.a"; sourceTree = "<absolute>"; };
+		5F0314221655487100AED83B /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_thread-mt.a"; path = "../../../../../opt/local/lib/libboost_thread-mt.a"; sourceTree = "<group>"; };
+		5F0314231655487100AED83B /* libwebsocketpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebsocketpp.a; path = mac/libwebsocketpp.a; sourceTree = "<group>"; };
 		5FD4929A1643150C00654062 /* ofxWebsocketppServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxWebsocketppServer.h; sourceTree = "<group>"; };
 		5FD4929C1643150C00654062 /* ofxWebsocketppServerEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxWebsocketppServerEvent.h; sourceTree = "<group>"; };
 		5FD4929D1643150C00654062 /* ofxWebsocketppServerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxWebsocketppServerHandler.h; sourceTree = "<group>"; };
@@ -144,7 +144,6 @@
 		5FD492971643149900654062 /* ofxWebsocketpp */ = {
 			isa = PBXGroup;
 			children = (
-				5FD4934B16431E4400654062 /* libs */,
 				5FD49299164314EE00654062 /* include */,
 				5FD4929F1643152800654062 /* src */,
 			);
@@ -182,13 +181,15 @@
 				5F0314221655487100AED83B /* libboost_thread-mt.a */,
 				5F0314231655487100AED83B /* libwebsocketpp.a */,
 			);
-			path = libs;
+			name = libs;
+			path = ../libs;
 			sourceTree = "<group>";
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
 				5FD492971643149900654062 /* ofxWebsocketpp */,
+				5FD4934B16431E4400654062 /* libs */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -526,7 +527,7 @@
 				OF_PATH = ../../..;
 				PREBINDING = NO;
 				PRODUCT_NAME = "example-serverDebug";
-				USER_HEADER_SEARCH_PATHS = "../../ofxWebsocketpp/libs/websocketpp/src/ ../../ofxWebsocketpp/libs/boost/include/";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -622,7 +623,7 @@
 				OF_PATH = ../../..;
 				PREBINDING = NO;
 				PRODUCT_NAME = "example-server";
-				USER_HEADER_SEARCH_PATHS = "../../ofxWebsocketpp/libs/websocketpp/src/ ../../ofxWebsocketpp/libs/boost/include/";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
