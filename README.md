@@ -25,7 +25,8 @@ Dependencies:
 Installation
 * Install boost.  HomeBrew or MacPorts, or just download.  
   * OS X, edit the Project.xcconfig file so that BOOST_LIBS_PATHS and BOOST_HEADERS point to the appropriate locations.
-  * Visual studio, 
+  * Visual studio, open up project properties and configure the C/C++ "Additional Include Directories" as well as Linker "Additional Library Directories" to point to your boost folder
+    * Examples (C:\boost for headers) (C:\boost\stage\lib or C:\boost\lib for libraries)
 * Checkout the websocketpp submodule
   - git submodule update
 

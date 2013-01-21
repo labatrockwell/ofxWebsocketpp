@@ -69,7 +69,8 @@ namespace wsClient {
         }
 
         if( m_connection ) {
-            m_connection->close(websocketpp::close::status::NORMAL, "");
+            //m_connection->close(websocketpp::close::status::NORMAL, "");
+			m_connection->terminate(true);
             m_connection.reset();
         }
         
